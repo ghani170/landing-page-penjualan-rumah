@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Motors | Premium Automotive Excellence</title>
+    
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+</head>
+<body class="font-sans bg-gray-50">
+   <!-- Navigation -->
+    <nav class="bg-white/30 backdrop-blur-md rounded-xl shadow-lg fixed w-full z-10 top-0 left-0 right-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+                <span class="text-2xl font-bold text-gray-900">Penjualan<span class="text-blue-600">Rumah</span></span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Home</a>
+                <a href="shop.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Shop</a>
+                <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Services</a>
+                <a href="about.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">About</a>
+                <a href="#" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Contact</a>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="hidden md:block relative">
+                <button id="gear-dropdown-button" class="px-6 py-3 rounded-full font-medium transition duration-300 focus:outline-none">
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md">
+                        <i class="fa-solid fa-gear fa-spin fa-2xl" style="color: #0091ff;"></i>
+                    </div>
+                </button>
+                
+                <!-- Gear Dropdown Menu -->
+                <div id="gear-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white/80 backdrop-blur-md rounded-md shadow-lg py-1 z-20">
+                    <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-bold">Dark Mode</button>
+                    <div class="border-t border-gray-200"></div>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-bold">Login</a>
+                </div>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button type="button" id="mobile-menu-button" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mobile menu (hidden by default) -->
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Home</a>
+            <a href="shop.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Shop</a>
+            <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">About</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Contact</a>
+
+             <!-- Services dropdown -->
+            <div class="relative">
+                <button id="services-dropdown-button" class="flex justify-between items-center w-full px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">
+                    <span>Setting</span>
+                    <i class="fas fa-chevron-down text-xs ml-1 transition-transform duration-200"></i>
+                </button>
+                <div id="services-dropdown" class="hidden pl-4 mt-1 space-y-1">
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Dark Mode</a> 
+                </div>
+            </div>
+
+            <!-- <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 hover:bg-blue-50">Schedule Consultation</a> -->
+        </div>
+    </div>
+</nav>
+
+   <div class="bg-gradient-to-b from-blue-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <!-- Bagian Hero -->
+        <div class="text-center mb-16 mt-30" data-aos="fade-up" data-aos-delay="80">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Mengenal Website Penjualan Rumah</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Selamat datang di website kami, tempat terbaik untuk menemukan rumah impian Anda. Kami menyediakan berbagai pilihan rumah dengan informasi lengkap dan akurat.</p>
+        </div>
+
+        <!-- Bagian Pengertian BMI -->
+        <div data-aos="fade-up" data-aos-delay="80" class="bg-white rounded-2xl shadow-lg overflow-hidden mb-16">
+            <div class="md:flex">
+                <div class="md:w-1/2 p-8 md:p-12 lg:p-16">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Tentang Kami</h2>
+                    <p class="text-gray-600 mb-6">Penjualan Rumah adalah solusi terdepan untuk Anda yang ingin menjual properti dengan mudah, cepat, dan menguntungkan. Kami memahami bahwa pasar properti dapat terasa rumit, dan itulah mengapa tim ahli kami hadir untuk menyederhanakannya.
+
+                    Dengan fokus pada transparansi, efisiensi, dan hasil terbaik, kami mengurus seluruh proses penjualan, mulai dari penentuan harga yang strategis hingga penutupan transaksi. Kami menggunakan teknologi canggih dan strategi pemasaran digital yang inovatif untuk memastikan properti Anda menjangkau calon pembeli yang paling potensial.
+
+                    Di Penjualan Rumah, kami tidak sekadar membantu Anda menjual, kami adalah mitra yang siap mewujudkan kesuksesan finansial Anda.
+                    </p>
+                </div>
+                <div class="md:w-1/2 bg-blue-100 flex items-center justify-center p-8">
+                    <img src="rumah2.jpg" alt="Gaya hidup sehat" class="rounded-lg shadow-md w-full h-auto max-h-96 object-cover">
+                </div>
+            </div>
+        </div>
+
+       
+
+        <!-- Bagian Keterbatasan -->
+        <div data-aos="fade-up" data-aos-delay="80" class="bg-white rounded-2xl shadow-lg overflow-hidden mb-16">
+            <div class="md:flex flex-row-reverse">
+                <div class="md:w-1/2 p-8 md:p-12 lg:p-16">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Mengapa Harus Penjualan Rumah?</h2>
+                    <!-- <p class="text-gray-600 mb-4">fsf</p> -->
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-gray-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                            </svg>
+                            <span>Penilaian Properti yang Akurat: Kami menggunakan data pasar terkini dan keahlian lokal untuk menentukan harga jual yang optimal.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-gray-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                            </svg>
+                            <span>Strategi Pemasaran Inovatif: Kami memanfaatkan teknologi terbaru dan jaringan luas untuk menjangkau audiens yang lebih besar.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-gray-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                            </svg>
+                            <span>Bimbingan Profesional: Dari persiapan rumah, negosiasi, hingga proses legal, tim kami akan memandu Anda dengan profesionalisme dan transparansi.</span>
+                        </li>
+                        <!-- <li class="flex items-start">
+                            <svg class="h-5 w-5 text-gray-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                            </svg>
+                            <span>Mungkin tidak sesuai untuk beberapa kelompok etnis</span>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="md:w-1/2 bg-gray-100 flex items-center justify-center p-8">
+                    <img src="rumah3.jpg" alt="Konsultasi dokter" class="rounded-lg shadow-md w-full h-auto max-h-96 object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Penjualan Rumah</h3>
+                    <p class="text-gray-400 text-sm">
+                        Berdiri sejak tadi
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Shop</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <address class="text-gray-400 text-sm not-italic">
+                        <p class="mb-2">15 kampus</p>
+                        <p class="mb-2">Phone: 0888888888</p>
+                        <p>Email: info@penjualanrumah.com</p>
+                    </address>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Subscribe to get updates on new arrivals and special offers.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-md text-gray-900 focus:outline-none">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-md">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2025 Penjualan Rumah
+                </p>
+                <div class="mt-4 md:mt-0 flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        
+        // JavaScript untuk hamburger menu
+       const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+         // Services dropdown toggle
+        const servicesDropdownButton = document.getElementById('services-dropdown-button');
+        const servicesDropdown = document.getElementById('services-dropdown');
+        
+        servicesDropdownButton.addEventListener('click', () => {
+            servicesDropdown.classList.toggle('hidden');
+            const icon = servicesDropdownButton.querySelector('i');
+            icon.classList.toggle('fa-chevron-down');
+            icon.classList.toggle('fa-chevron-up');
+        });
+
+         // Gear dropdown toggle
+        const gearDropdownButton = document.getElementById('gear-dropdown-button');
+        const gearDropdown = document.getElementById('gear-dropdown');
+        
+        gearDropdownButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            gearDropdown.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
