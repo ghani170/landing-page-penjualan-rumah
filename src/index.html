@@ -33,7 +33,7 @@
             <div class="hidden md:block relative">
                 <button id="gear-dropdown-button" class="px-6 py-3 rounded-full font-medium transition duration-300 focus:outline-none">
                     <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md">
-                        <i class="fa-solid fa-gear fa-spin fa-2xl" style="color: #0091ff;"></i>
+                        <i class="fa-solid fa-bars fa-2xl"></i>
                     </div>
                 </button>
                 
@@ -359,42 +359,6 @@
     <script>
         AOS.init();
     </script>
-    <script>
-        
-        document.getElementById('scrollproduk').addEventListener("click", function(e){ 
-            e.preventDefault();
-            document.getElementById('produk').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        });
-
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Services dropdown toggle
-        const servicesDropdownButton = document.getElementById('services-dropdown-button');
-        const servicesDropdown = document.getElementById('services-dropdown');
-        
-        servicesDropdownButton.addEventListener('click', () => {
-            servicesDropdown.classList.toggle('hidden');
-            const icon = servicesDropdownButton.querySelector('i');
-            icon.classList.toggle('fa-chevron-down');
-            icon.classList.toggle('fa-chevron-up');
-        });
-         // Gear dropdown toggle
-        const gearDropdownButton = document.getElementById('gear-dropdown-button');
-        const gearDropdown = document.getElementById('gear-dropdown');
-        
-        gearDropdownButton.addEventListener('click', (e) => {
-            e.stopPropagation();
-            gearDropdown.classList.toggle('hidden');
-        });
-        
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
