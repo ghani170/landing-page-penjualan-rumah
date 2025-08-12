@@ -1,5 +1,4 @@
- 
-        document.getElementById('scrollproduk').addEventListener("click", function(e){ 
+       document.getElementById('scrollproduk').addEventListener("click", function(e){ 
             e.preventDefault();
             document.getElementById('produk').scrollIntoView({
                 behavior: 'smooth',
