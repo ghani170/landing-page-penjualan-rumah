@@ -1,11 +1,3 @@
-       document.getElementById('scrollproduk').addEventListener("click", function(e){ 
-            e.preventDefault();
-            document.getElementById('produk').scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        });
-
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         
@@ -31,5 +23,3 @@
             e.stopPropagation();
             gearDropdown.classList.toggle('hidden');
         });
-
-        
