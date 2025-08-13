@@ -1,5 +1,4 @@
- 
-        // JavaScript untuk hamburger menu
+         // JavaScript untuk hamburger menu
        const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         
