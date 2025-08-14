@@ -14,7 +14,7 @@ Masih dalam tahap pengembangan
 - **Keunggulan**: Empat alasan memilih layanan Penjualan Rumah.
 - **CTA Section**: Ajakan untuk menghubungi tim spesialis.
 - **Footer**: Kontak, newsletter, dan link sosial media.
-- **Footer**: Memiliki fitur dark mode.
+- **Dark Mode**: Memiliki fitur dark mode.
 - **Animasi**: Menggunakan [AOS](https://michalsnik.github.io/aos/) untuk efek animasi saat scroll.
 
 ## Struktur Folder
