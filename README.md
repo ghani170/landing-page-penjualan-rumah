@@ -41,7 +41,7 @@ src/
 2. **Build Tailwind CSS**  
    Jalankan:
    ```sh
-   npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+   npm run dev
    ```
 
 3. **Buka Landing Page**  
