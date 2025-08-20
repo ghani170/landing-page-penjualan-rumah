@@ -1,6 +1,6 @@
 # Penjualan Rumah - Landing Page
 
-Landing page modern untuk website penjualan rumah, dibuat dengan HTML dan Tailwind CSS.
+Landing page modern untuk website penjualan rumah, dibuat dengan HTML, Java Script, dan Tailwind CSS.
 
 # NOTE
 
@@ -14,20 +14,32 @@ Masih dalam tahap pengembangan
 - **Keunggulan**: Empat alasan memilih layanan Penjualan Rumah.
 - **CTA Section**: Ajakan untuk menghubungi tim spesialis.
 - **Footer**: Kontak, newsletter, dan link sosial media.
+- **Dark Mode**: Memiliki fitur dark mode.
 - **Animasi**: Menggunakan [AOS](https://michalsnik.github.io/aos/) untuk efek animasi saat scroll.
 
 ## Struktur Folder
 
 ```
-src/
-  index.html      # Landing page utama
-  shop.html       # Halaman daftar rumah
-  about.html      # Tentang Penjualan Rumah
-  input.css       # Sumber Tailwind CSS
-  output.css      # Hasil build Tailwind CSS
-  rumah2.jpg      # Gambar rumah
-  rumah3.jpg      # Gambar rumah
-  rumah4.png      # Gambar rumah
+penjualan-rumah/
+│
+├── src/
+│   ├── index.html      # Landing page utama
+│   ├── shop.html       # Halaman daftar rumah
+│   ├── about.html      # Halaman tentang perusahaan
+│   ├── contact.html    # Halaman kontak
+│   ├── input.css       # Sumber Tailwind CSS (custom style)
+│   ├── output.css      # Hasil build Tailwind CSS
+│   ├── index.js        # Script utama landing page
+│   ├── about.js        # Script halaman about
+│
+├── img/
+│   ├── rumah2.jpg      # Gambar rumah 2
+│   ├── rumah3.jpg      # Gambar rumah 3
+│   ├── rumah4.png      # Gambar rumah 4
+│
+├── README.md           # Dokumentasi proyek
+├── package.json        # Konfigurasi npm dan dependencies
+├── tailwind.config.js  # Konfigurasi Tailwind CSS
 ```
 
 ## Cara Menjalankan

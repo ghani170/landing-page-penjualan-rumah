@@ -8,89 +8,98 @@
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="about.css">
+    <style>
+       
+    </style>
 </head>
-<body class="font-sans bg-gray-50">
+<body class="font-sans bg-blue-50">
    <!-- Navigation -->
-    <nav class="bg-white/30 backdrop-blur-md rounded-xl shadow-lg fixed w-full z-10 top-0 left-0 right-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-20 items-center">
-            <!-- Logo -->
-            <div class="flex-shrink-0 flex items-center">
-                <span class="text-2xl font-bold text-gray-900">OC<span class="text-blue-600">COMPANY</span></span>
-            </div>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Home</a>
-                <a href="shop.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Shop</a>
-                <a href="about.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">About</a>
-                <a href="contact.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Contact</a>
-            </div>
-            
-            <!-- CTA Button -->
-            <div class="hidden md:block relative">
-                <button id="gear-dropdown-button" class="px-6 py-3 rounded-full font-medium transition duration-300 focus:outline-none">
-                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md">
-                        <i class="fa-solid fa-bars fa-2xl"></i>
-                    </div>
-                </button>
+    <nav class="bg-white/30 backdrop-blur-md rounded-xl shadow-lg fixed w-full z-10 top-0 left-0 right-0 dark:text-white transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-gray-900">OC<span class="text-blue-600">COMPANY</span></span>
+                </div>
                 
-                <!-- Gear Dropdown Menu -->
-                <div id="gear-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white/80 backdrop-blur-md rounded-md shadow-lg py-1 z-20">
-                    <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-bold">Dark Mode</button>
-                    <div class="border-t border-gray-200"></div>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-bold">Login</a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Home</a>
+                    <a href="shop.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Shop</a>
+                    <a href="about.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">About</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Contact</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block relative">
+                    <button id="gear-dropdown-button" class="px-6 py-3 rounded-full font-medium transition duration-300 focus:outline-none">
+                        <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md">
+                            <i class="fa-solid fa-bars fa-2xl text-gray-900"></i>
+                        </div>
+                    </button>
+        
+                    <!-- Gear Dropdown Menu -->
+                    <div id="gear-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white/80 text-gray-900 backdrop-blur-md rounded-md shadow-lg py-1 z-20">
+                        <button id="dark-mode-toggle" class="w-full text-left px-4 py-2 text-sm text-gray-900 hover:text-blue-600 hover:bg-gray-50 font-bold flex items-center ">
+                            <span id="dark-mode-text">Dark Mode</span>
+                            <i id="dark-mode-icon" class="fas fa-moon ml-2"></i>
+                        </button>
+                        <!-- <div class="border-t border-gray-200 dark:border-gray-700"></div> -->
+                        <!-- <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-bold dark:text-gray-300 dark:hover:bg-gray-700">Login</a> -->
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" id="mobile-menu-button" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
                 </div>
             </div>
-            
-            <!-- Mobile menu button -->
-            <div class="md:hidden flex items-center">
-                <button type="button" id="mobile-menu-button" class="text-gray-500 hover:text-gray-900 focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
         </div>
-    </div>
-    
-    <!-- Mobile menu (hidden by default) -->
-    <div class="md:hidden hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Home</a>
-            <a href="shop.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Shop</a>
-            <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">About</a>
-            <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Contact</a>
+        
+        <!-- Mobile menu (hidden by default) -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Home</a>
+                <a href="shop.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Shop</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">About</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Contact</a>
 
-             <!-- Services dropdown -->
-            <div class="relative">
-                <button id="services-dropdown-button" class="flex justify-between items-center w-full px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">
-                    <span>Setting</span>
-                    <i class="fas fa-chevron-down text-xs ml-1 transition-transform duration-200"></i>
-                </button>
-                <div id="services-dropdown" class="hidden pl-4 mt-1 space-y-1">
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Dark Mode</a> 
+                <!-- Services dropdown -->
+                <div class="relative">
+                    <button id="services-dropdown-button" class="flex justify-between items-center w-full px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">
+                        <span>Setting</span>
+                        <i class="fas fa-chevron-down text-xs ml-1 transition-transform duration-200"></i>
+                    </button>
+                    <div id="services-dropdown" class="hidden pl-4 mt-1 space-y-1">
+                        <button id="mobile-dark-mode-toggle" class="flex items-center w-full px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50 text-gray-900 dark:hover:bg-gray-100">
+                            <span id="mobile-dark-mode-text">Dark Mode</span>
+                            <i class="fas fa-moon ml-2"></i>
+                        </button> 
+                    </div>
                 </div>
+
+                <!-- <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 hover:bg-blue-50">Schedule Consultation</a> -->
             </div>
-
-            <!-- <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 hover:bg-blue-50">Schedule Consultation</a> -->
         </div>
-    </div>
-</nav>
+    </nav>
 
-   <div class="bg-gradient-to-b from-blue-50 to-white">
+   <div class="bg-white transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <!-- Bagian Hero -->
-        <div class="text-center mb-16 mt-30" data-aos="fade-up" data-aos-delay="80">
+        <div class="text-center mb-16 mt-17" data-aos="fade-up" data-aos-delay="80">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Mengenal OC Company Website Penjualan Rumah </h1>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Selamat datang di website kami, tempat terbaik untuk menemukan rumah impian Anda. Kami menyediakan berbagai pilihan rumah dengan informasi lengkap dan akurat.</p>
+            <p class="text-xl text-gray-900  max-w-3xl mx-auto">Selamat datang di website kami, tempat terbaik untuk menemukan rumah impian Anda. Kami menyediakan berbagai pilihan rumah dengan informasi lengkap dan akurat.</p>
         </div>
 
         <!-- Bagian Tentang Kami -->
-        <div data-aos="fade-up" data-aos-delay="80" class="bg-white rounded-2xl shadow-lg overflow-hidden mb-16">
+        <div data-aos="fade-up" data-aos-delay="80" class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden mb-16">
             <div class="md:flex">
                 <div class="md:w-1/2 p-8 md:p-12 lg:p-16">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">Tentang Kami</h2>
-                    <p class="text-gray-600 mb-6">OC Company adalah solusi terdepan untuk Anda yang ingin menjual properti dengan mudah, cepat, dan menguntungkan. Kami memahami bahwa pasar properti dapat terasa rumit, dan itulah mengapa tim ahli kami hadir untuk menyederhanakannya.
+                    <p class="text-gray-900 mb-6">OC Company adalah solusi terdepan untuk Anda yang ingin menjual properti dengan mudah, cepat, dan menguntungkan. Kami memahami bahwa pasar properti dapat terasa rumit, dan itulah mengapa tim ahli kami hadir untuk menyederhanakannya.
 
                     Dengan fokus pada transparansi, efisiensi, dan hasil terbaik, kami mengurus seluruh proses penjualan, mulai dari penentuan harga yang strategis hingga penutupan transaksi. Kami menggunakan teknologi canggih dan strategi pemasaran digital yang inovatif untuk memastikan properti Anda menjangkau calon pembeli yang paling potensial.
 
@@ -106,12 +115,12 @@
        
 
         <!-- Bagian Keterbatasan -->
-        <div data-aos="fade-up" data-aos-delay="80" class="bg-white rounded-2xl shadow-lg overflow-hidden mb-16">
+        <div data-aos="fade-up" data-aos-delay="80" class="bg-gray-100 rounded-2xl shadow-lg overflow-hidden mb-16">
             <div class="md:flex flex-row-reverse">
                 <div class="md:w-1/2 p-8 md:p-12 lg:p-16">
                     <h2 class="text-3xl font-bold text-gray-900 mb-6">Mengapa Harus OC Company?</h2>
                     <!-- <p class="text-gray-600 mb-4">fsf</p> -->
-                    <ul class="space-y-3 text-gray-600">
+                    <ul class="space-y-3 text-gray-900">
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-gray-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
@@ -138,7 +147,7 @@
                         </li> -->
                     </ul>
                 </div>
-                <div class="md:w-1/2 bg-gray-100 flex items-center justify-center p-8">
+                <div class="md:w-1/2 bg-blue-100 flex items-center justify-center p-8">
                     <img src="image/rumah3.jpg" alt="Konsultasi dokter" class="rounded-lg shadow-md w-full h-auto max-h-96 object-cover">
                 </div>
             </div>
@@ -184,7 +193,7 @@
                         Subscribe to get updates on new arrivals and special offers.
                     </p>
                     <form class="flex">
-                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-md text-gray-900 focus:outline-none">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-md text-gray-200 focus:outline-none">
                         <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-md">
                             <i class="fas fa-paper-plane"></i>
                         </button>

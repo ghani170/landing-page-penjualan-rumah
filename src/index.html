@@ -7,93 +7,154 @@
     <link rel="stylesheet" href="./output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <style>
+        .dark {
+            color-scheme: dark;
+        }
+
+        .dark .bg-white {
+            background-color: #182130;
+        }
+
+        .dark .bg-gray-100 {
+            background-color: #111827;
+        }
+
+        .dark .bg-blue-700 {
+            background-color: #1e40af;
+        }
+
+        .dark .text-gray-900 {
+            color: #f3f4f6;
+        }
+
+        .dark .text-gray-500 {
+            color: #9ca3af; 
+        }
+
+        .dark .border-gray-200 {
+            border-color: #374151; 
+        }
+
+        .dark .bg-white\/30 {
+            background-color: rgba(31, 41, 55, 0.3); 
+        }
+
+        .dark .bg-white\/80 {
+            background-color: rgba(31, 41, 55, 0.8); 
+        }
+
+        .dark .hover\:bg-gray-50:hover {
+            background-color: rgba(55, 65, 81, 0.5); 
+        }
+
+        .dark .bg-gray-900 {
+            background-color: #030712; 
+        }
+
+        .dark .border-gray-800 {
+            border-color: #1f2937; 
+        }
+    </style>
 </head>
-<body class="font-sans bg-gray-50">
-   <!-- Navigation -->
-    <nav class="bg-white/30 backdrop-blur-md rounded-xl shadow-lg fixed w-full z-10 top-0 left-0 right-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-20 items-center">
-            <!-- Logo -->
-            <div class="flex-shrink-0 flex items-center">
-                <span class="text-2xl font-bold text-gray-900">OC<span class="text-blue-600">COMPANY</span></span>
-            </div>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Home</a>
-                <a href="shop.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Shop</a>
-                <a href="about.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">About</a>
-                <a href="contact.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Contact</a>
-            </div>
-            
-            <!-- CTA Button -->
-            <div class="hidden md:block relative">
-                <button id="gear-dropdown-button" class="px-6 py-3 rounded-full font-medium transition duration-300 focus:outline-none">
-                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md">
-                        <i class="fa-solid fa-bars fa-2xl"></i>
-                    </div>
-                </button>
+<body class="font-sans bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-white/30 backdrop-blur-md rounded-xl shadow-lg fixed w-full z-10 top-0 left-0 right-0 dark:text-white transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-gray-900">OC<span class="text-blue-600">COMPANY</span></span>
+                </div>
                 
-                <!-- Gear Dropdown Menu -->
-                <div id="gear-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white/80 backdrop-blur-md rounded-md shadow-lg py-1 z-20">
-                    <button class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-bold">Dark Mode</button>
-                    <div class="border-t border-gray-200"></div>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-bold">Login</a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Home</a>
+                    <a href="shop.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Shop</a>
+                    <a href="about.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">About</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-blue-600 px-3 py-2 font-bold">Contact</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block relative">
+                    <button id="gear-dropdown-button" class="px-6 py-3 rounded-full font-medium transition duration-300 focus:outline-none">
+                        <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md">
+                            <i class="fa-solid fa-bars fa-2xl text-gray-900"></i>
+                        </div>
+                    </button>
+        
+                    <!-- Gear Dropdown Menu -->
+                    <div id="gear-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white/80 text-gray-900 backdrop-blur-md rounded-md shadow-lg py-1 z-20">
+                        <button id="dark-mode-toggle" class="w-full text-left px-4 py-2 text-sm text-gray-900 hover:text-blue-600 hover:bg-gray-50 font-bold flex items-center ">
+                            <span id="dark-mode-text">Dark Mode</span>
+                            <i id="dark-mode-icon" class="fas fa-moon ml-2"></i>
+                        </button>
+                        <!-- <div class="border-t border-gray-200 dark:border-gray-700"></div> -->
+                        <!-- <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-bold dark:text-gray-300 dark:hover:bg-gray-700">Login</a> -->
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" id="mobile-menu-button" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
                 </div>
             </div>
-            
-            <!-- Mobile menu button -->
-            <div class="md:hidden flex items-center">
-                <button type="button" id="mobile-menu-button" class="text-gray-500 hover:text-gray-900 focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
         </div>
-    </div>
-    
-    <!-- Mobile menu (hidden by default) -->
-    <div class="md:hidden hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Home</a>
-            <a href="shop.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Shop</a>
-            <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">About</a>
-            <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Contact</a>
+        
+        <!-- Mobile menu (hidden by default) -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Home</a>
+                <a href="shop.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Shop</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">About</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Contact</a>
 
-             <!-- Services dropdown -->
-            <div class="relative">
-                <button id="services-dropdown-button" class="flex justify-between items-center w-full px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">
-                    <span>Setting</span>
-                    <i class="fas fa-chevron-down text-xs ml-1 transition-transform duration-200"></i>
-                </button>
-                <div id="services-dropdown" class="hidden pl-4 mt-1 space-y-1">
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">Dark Mode</a> 
+                <!-- Services dropdown -->
+                <div class="relative">
+                    <button id="services-dropdown-button" class="flex justify-between items-center w-full px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-50">
+                        <span>Setting</span>
+                        <i class="fas fa-chevron-down text-xs ml-1 transition-transform duration-200"></i>
+                    </button>
+                    <div id="services-dropdown" class="hidden pl-4 mt-1 space-y-1">
+                        <button id="mobile-dark-mode-toggle" class="flex items-center w-full px-3 py-2 rounded-md text-base font-medium hover:text-blue-600 hover:bg-gray-50 text-gray-900 dark:hover:bg-gray-100">
+                            <span id="mobile-dark-mode-text">Dark Mode</span>
+                            <i class="fas fa-moon ml-2"></i>
+                        </button> 
+                    </div>
                 </div>
+
+                <!-- <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 hover:bg-blue-50">Schedule Consultation</a> -->
             </div>
-
-            <!-- <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 hover:bg-blue-50">Schedule Consultation</a> -->
         </div>
-    </div>
-</nav>
+    </nav>
 
-   <section class="bg-gray-100 bg-cover bg-no-repeat bg-bottom mt-25">
-    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-        <div data-aos="fade-right" data-aos-delay="100" class="mr-auto place-self-center lg:col-span-7">
-            <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-black">Penjualan Rumah</h1>
-            <p class="max-w-2xl mb-6 font-dark text-black-500 lg:mb-8 md:text-lg lg:text-xl dark:text-black-400">Selamat datang di tempat di mana Anda bisa menemukan 'rumah' yang sebenarnya. Kami memahami bahwa rumah bukan hanya bangunan, tapi juga tempat di mana kenangan indah tercipta.</p>
-            <a href="#produk" id="scrollproduk" class="inline-flex items-center justify-center py-3 mr-3 text-base font-medium text-center text-black rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                Temukan
-                <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-            </a>
+    <section class="bg-gray-100 bg-custom-cover bg-no-repeat bg-bottom mt-17">
+        <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+            <div class="mr-auto place-self-center lg:col-span-7 mb-5" data-aos="fade-right" data-aos-delay="100">
+                <img src="image/rumah4.png" alt="Desain rumah modern" class="">
+            </div>
+            <div class="lg:mt-0 lg:col-span-5 flex flex-col justify-center">
+                <div data-aos="zoom-in-left" data-aos-delay="200">
+                    <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">Penjualan Rumah</h1>
+                    <p class="max-w-2xl mb-6 text-gray-900 lg:mb-8 md:text-lg lg:text-xl">Selamat datang di tempat di mana Anda bisa menemukan 'rumah' yang sebenarnya. Kami memahami bahwa rumah bukan hanya bangunan, tapi juga tempat di mana kenangan indah tercipta.</p>
+                </div>
+                
+                <div data-aos="fade-up" data-aos-delay="300" class="mt-4">
+                    <a href="#produk" id="scrollproduk" class="py-3 px-6 text-white rounded-md inline-flex items-center justify-center text-base font-medium text-center bg-blue-600 hover:bg-blue-700 transition duration-300">
+                        Temukan
+                        <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>                
         </div>
-        <div data-aos="fade-left"  data-aos-delay="95" class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="image/rumah4.png" alt="mockup">
-        </div>                
-    </div>
-</section>
+    </section>
 
     <!-- Featured Vehicles -->
-    <div id="produk"  data-aos="fade-up" data-aos-delay="100" class="py-16 bg-white">
+    <div data-aos="fade-up" data-aos-delay="100" id="produk" class="py-16 bg-white mt-5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -106,7 +167,7 @@
 
             <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Card 1 -->
-                <div class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                <div class="group relative bg-gray-100 border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
                     <div class="aspect-w-3 aspect-h-2 bg-gray-200 group-hover:opacity-75 overflow-hidden">
                         <img src="image/rumah5.jpeg" alt="Car model" class="w-full h-64 object-cover">
                     </div>
@@ -138,7 +199,7 @@
                 </div>
 
                 <!-- Card 2 -->
-                <div class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                <div class="group relative bg-gray-100 border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="70">
                     <div class="aspect-w-3 aspect-h-2 bg-gray-200 group-hover:opacity-75 overflow-hidden">
                         <img src="image/rumah6.jpeg" alt="Car model" class="w-full h-64 object-cover">
                     </div>
@@ -170,7 +231,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                <div class="group relative bg-gray-100 border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300" data-aos="fade-up" data-aos-delay="100">
                     <div class="aspect-w-3 aspect-h-2 bg-gray-200 group-hover:opacity-75 overflow-hidden">
                         <img src="image/rumah7.jpeg" alt="Car model" class="w-full h-64 object-cover">
                     </div>
@@ -184,7 +245,7 @@
                                     </a>
                                 </h3>
                                 <p class="mt-1 text-sm text-gray-500">Rancamaya Bogor</p>
-                                <p class="text-lg font-semibold text-blue-600 mt-2">Rp. 2,69 M</p>
+                                <p class="text-lg font-semibold text-blue-600 mt-9">Rp. 2,69 M</p>
                             </div>
                            
                         </div>
@@ -202,7 +263,7 @@
                 </div>
             </div>
 
-            <div class="mt-12 text-center">
+            <div class="mt-12 text-center" data-aos="zoom-in" data-aos-delay="100">
                 <a href="shop.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
                     View Full Inventory
                     <i class="fas fa-arrow-right ml-2"></i>
@@ -212,10 +273,10 @@
     </div>
 
     <!-- Services Section -->
-    <div class="bg-gray-100 py-16">
+    <div class="bg-gray-100 py-16" data-aos="fade-up" data-aos-delay="100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl" data-aos="fade-up" data-aos-delay="100">
                     Kenapa harus OC Company?
                 </h2>
                 <!-- <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
@@ -225,7 +286,7 @@
 
             <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 <!-- Service 1 -->
-                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                <div class="bg-gray-100 backdrop-blur-md border border-gray-200 p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="100">
                     <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
                         <i class="fas fa-car text-xl"></i>
                     </div>
@@ -236,7 +297,7 @@
                 </div>
 
                 <!-- Service 2 -->
-                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                <div class="bg-gray-100 border border-gray-200 p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="150">
                     <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
                         <i class="fa-solid fa-house text-xl"></i>
                     </div>
@@ -247,7 +308,7 @@
                 </div>
 
                 <!-- Service 3 -->
-                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                <div class="bg-gray-100 border border-gray-200 p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="150">
                     <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
                         <i class="fa-solid fa-location-dot text-xl"></i>
                     </div>
@@ -258,7 +319,7 @@
                 </div>
 
                 <!-- Service 4 -->
-                <div class="bg-white p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300">
+                <div class="bg-gray-100 border border-gray-200 p-8 rounded-lg shadow-md text-center hover:shadow-lg transition duration-300" data-aos="fade-up" data-aos-delay="100">
                     <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-md bg-blue-100 text-blue-600">
                         <i class="fa-solid fa-mountain-city text-xl"></i>
                     </div>
@@ -274,7 +335,7 @@
     <!-- CTA Section -->
     <div class="bg-blue-700">
         <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:flex lg:justify-between">
-            <div class="max-w-xl">
+            <div class="max-w-xl" data-aos="fade-right" data-aos-delay="100">
                 <h2 class="text-4xl font-extrabold text-white sm:text-5xl sm:tracking-tight lg:text-6xl">
                     Siap Menemukan Rumah Impian Anda?
                 </h2>
@@ -283,8 +344,8 @@
                 </p>
             </div>
             <div class="mt-10 flex-shrink-0 lg:mt-0 lg:ml-10 lg:flex lg:items-center">
-                <div class="inline-flex rounded-md shadow">
-                    <a href="#" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 md:py-4 md:text-lg md:px-10">
+                <div class="inline-flex rounded-md shadow" data-aos="fade-left" data-aos-delay="100">
+                    <a href="contact.html" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-blue-50 md:py-4 md:text-lg md:px-10">
                         Contact Us
                     </a>
                 </div>
@@ -332,7 +393,7 @@
                         Subscribe to get updates on new arrivals and special offers.
                     </p>
                     <form class="flex">
-                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-md text-gray-900 focus:outline-none">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-md text-gray-200 focus:outline-none">
                         <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-md">
                             <i class="fas fa-paper-plane"></i>
                         </button>
